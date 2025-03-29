@@ -3,7 +3,7 @@ Select p.product_name, Sum(o.unit) as unit
 from Products p
 Left join Orders o
 ON p.product_id = o.product_id
-where o.order_date >= '2020-02-01' AND o.order_date < '2020-02-29'
+where o.order_date >= '2020-02-01' AND o.order_date < '2020-03-01'
 group by p.product_name
 having unit >= 100
 
